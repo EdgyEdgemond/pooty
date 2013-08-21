@@ -1,0 +1,298 @@
+/*****************************************************************
+ *
+ *    The following CSS chunk is handy to keep for container
+ *    banner and calendar convenience 
+ *
+ ***************************************************************/   
+body,h1,h2,h3,h4,h5,h6,div,span,p,ul,li,a,form { padding:0px;margin:0px; }
+body { background: #EEE url('../images/background.jpg') repeat;color:#000;font-family:verdana;padding:10px; }
+
+* {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+#container{
+
+	margin-left: auto; 
+  margin-right: auto; 
+	width: 900px;
+}
+
+* html #container {
+
+	position:absolute;
+	left: expression(document.body.clientWidth < 900 ? "0px" : "50%" );
+	margin-left:expression(document.body.clientWidth < 900 ? "0px" : "-450px" );
+  	width: 900px;
+  	/*background-color:#EEF;*/
+}  
+
+#banner {
+  position:fixed;
+  top:0px;
+  left:1060px;
+  opacity:.90;
+  z-index:20;
+}
+
+html* #banner {
+  filter: alpha(opacity=90);
+}
+
+#banner img {
+  width:220px;
+  height:220px;
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90)
+}
+
+#sf_calendar_id {
+  background:#FFF;
+  padding:3px;
+  border:1px #000 solid;
+}
+
+#sf_calendar_id td{
+  cursor: pointer;
+  text-align:center;
+}
+
+#sf_calendar_id td.sf_unselectable {
+  cursor:default;
+}
+
+
+#sf_calendar_id td.sf_weekend {
+  background: #CCC;
+}
+
+#sf_calendar_id td.sf_selected_day {
+  background: #CC0000;
+}
+
+.date {
+  cursor:pointer;
+}
+
+.datetime {
+  cursor:pointer;
+}
+
+
+/*link menu stuff*/
+#sddm
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial;
+  background:#FFF;} /*this becomes the divider between base links*/
+
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0;
+	padding: 3px 10px 0px 10px;
+	/*width: 90px;*/
+	background: #000;  /*Main section color*/
+	color: #f1e2e2;       /*Main link text*/ 
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover {	
+	background: #000;
+	color: #AB0609;
+}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #AB0609}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 4px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #000;
+		color: #f1e2e2;
+		font: 11px arial}
+
+  #sddm div a:hover{	
+    background: #333333;
+	  color: #AB0609;
+	  font-weight: normal;
+  }
+
+
+.faq {
+  position:fixed;
+  left:10px;
+  top:10px;
+  border:1px solid #CCC;
+  background:#000;
+  padding:2px 4px;
+  width:70px;
+  text-align:center;
+  z-index:20;
+  cursor:pointer;
+  color:#FFF;
+}
+
+div.main_message {
+  height:40px;
+	background: url( "../images/message_back_left.png" ) no-repeat;
+	float:left;
+	margin-bottom:2px;
+}
+
+div.main_message_message {
+  color:#23c92e;
+  margin-left:45px;
+  font-weight:bold;
+  padding-top:12px;
+  height:28px;  
+  float:left;
+	background: url( "../images/message_back_mid.png" ) repeat;  
+}
+
+div.main_message_right {
+  height:40px;
+  width:40px;  
+  float:left;
+	background: url( "../images/message_back_right.png" ) no-repeat;
+}
+
+div.main_error {
+  height:40px;  
+	background: url( "../images/error_back_left.png" ) no-repeat;
+	float:left;
+  margin-bottom:2px;
+}
+
+div.main_error_message {
+  color:#FF4C57;
+  margin-left:45px;
+  font-weight:bold;
+  padding-top:12px;
+  height:28px;  
+  float:left;
+	background: url( "../images/error_back_mid.png" ) repeat;  
+}
+
+div.main_error_right {
+  height:40px;
+  width:40px;
+  float:left;
+	background: url( "../images/error_back_right.png" ) no-repeat;
+}
+
+tr.error {
+  background: #fde4e4;
+  color:#FF4C57;
+  font-weight:bold;
+}
+
+.form_label {
+	background:url( "../images/form_label.png" ) no-repeat left top;
+	font-family: verdana, sans-serif; 
+	font-size: 11px; 
+	height:25px;
+	padding: 0px 5px 0px 10px;
+	text-align:right;
+	color:#fff;
+}
+
+.form_label_required {
+	background:url( "../images/form_label_required.png" ) no-repeat left top;
+	font-family: verdana, sans-serif; 
+	font-size: 11px; 
+	height:25px;
+	padding: 0px 5px 0px 10px;
+	text-align:right;
+	color:#fff;
+} 
+  
+/**********************************************************
+ *
+ *  End CSS for banner/calendar/container 
+ *
+ ***********************************************************/  
+
+/* everything below here is yours to wipe :)*/
+
+div.Main {
+  /*Firefox styling*/
+  float: left;
+  background-color: #FFF;	
+  min-height: 600px;
+  width:900px;
+} 
+
+* html div.Main {
+  /*IE styling*/
+  float: left;
+  background-color: #FFF;
+  text-align: center;
+  height: 550px;
+  width:900px;
+}
+
+#link_list {
+  float: left;
+  background-color: #FFF; 
+  width:900px;
+  color: #000;
+  text-align: center;
+}
+
+#link_list a {
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+}
+
+#link_list a:hover {
+  font-weight: bold;
+  color: #111;
+  text-decoration: underline;
+}
+
+#header {
+  float: left;
+  /*background: #FFF url('../images/header_image.gif') no-repeat;*/
+  background: #FFF;
+  width:900px;
+  height: 70px;
+  color: #000;
+  text-align: center;
+}
+
+#header h1 {
+  color: #000;
+	font: 50px "Gill Sans Ultra Bold","Trebuchet MS",Verdana,verdana; 
+}   
+
+td.odd {
+  background:#CCC;
+}
+
+td.even {
+  background:#FFF;
+}
+
+td.err_msg {
+  color:#CC0000;
+}
